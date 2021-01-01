@@ -13,7 +13,6 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.JoinColumn;
-
 @Entity
 public class User implements Serializable{
 
