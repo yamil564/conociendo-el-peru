@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Transient;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.JoinColumn;
@@ -24,20 +27,30 @@ public class User implements Serializable{
 	private Long id;
 	
 	@Column 
+	@NotBlank
 	private String firstName;
+	
 	@Column 
+	@NotBlank
 	private String lastName;
+	
 	@Column(unique = true) 
+	@Email 
+	@NotBlank
 	private String email;
+	
 	@Column(unique = true) 
+	@NotBlank
 	private String username;
-	@Column
+	
+	@Column 
+	@NotBlank
 	private String password;
 	
 	@Transient 
 	private String confirmPassword;
 	
-	@ManyToMany(fetch = FetchType.LAZY)
+	@ManyToMany(fetch = FetchType.LAZY)//se obtiene cuando se necesita
 	@JoinTable(name="user_roles"
 		,joinColumns=@JoinColumn(name="user_id")
 		,inverseJoinColumns=@JoinColumn(name="role_id"))

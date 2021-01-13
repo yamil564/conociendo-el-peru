@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layouts/base-layout::head"></head>
+<body>
+
+  <!-- Ir Arriba -->
+  <div class="go-top">
+    <span class="fas fa-angle-up"></span>
+  </div>
+
+    <!-- Menu de Navegacion -->
+     <header id="header">
+    <nav class="menu" style="padding-top: 35px;">
+     <div class="logo-box">
+       
+       <span class="btn-menu"><i class="fas fa-bars"></i></span>
+         <p id="logo" >Conocimiento Cultural Peruano</p>
+     </div>
+     
+     <div class="list-container">
+        <ul class="lists" style="margin-bottom: 0px">
+          <li><a th:href="@{/}" >Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+            <li><a th:href="@{/destinos}">Registrate</a></li>
+        <li class="nav-item dropdown" style="position: relative;top: -19px;">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" th:href="@{/destinos}">
+          Destinos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" th:href="@{/destinos/ayabaca}">Ayabaca</a>
+          <a class="dropdown-item" th:href="@{/destinos/huancabamba}">Huancabamba</a>
+          <a class="dropdown-item" th:href="@{/destinos/morropon}">Morropon</a>
+          <a class="dropdown-item" th:href="@{/destinos/paita}">Paita</a>
+          <a class="dropdown-item" th:href="@{/destinos/piura}">Piura</a>
+          <a class="dropdown-item" th:href="@{/destinos/sechura}">Sechura</a>
+          <a class="dropdown-item" th:href="@{/destinos/sullana}">Sullana</a>
+          <a class="dropdown-item" th:href="@{/destinos/talara}">Talara</a>
+          
+      </li>
+      
+        </ul>
+         
+        
+     
+        
+     </div>
+        
+    </nav>
+      <div class="img-morropon">
+     <div class="welcome">
+       <h1 class=ayabaca-principal>Bienvenido a Morropon</h1>
+       <hr>
+      
+       
+     </div>       
+    </div>  
+
+    </header>
+       <!-- --carrusel -->
+
+        
+ 
+  
+    </header>
+    <!----contenido-->
+    <section class="acerca-de">
+    <div class="info-container">
+      <h1 id=destinos>Encuentra los lugares turisticos de Ayabaca</h1>
+      <p id="destinos-p">Disfruta de una manera difetente</p>
+        <hr >
+      <h3 id="imagenes">Descubre lo mejor de Piura</h3>
+      <br>
+     <!--imagenes principales-->
+      <div class="about-gallery">
+      
+       <div class="container py-2">
+     <div class="row">
+     <div class="col-md-6">
+          <div class="ayabaca" >
+             <div class="overlay-effect h-100 w-100" ><h3><a th:href="@{/destinos/ayabaca}">Provincia de <br>Ayabaca</a></h3></div>
+            
+          </div>
+        </div>
+        <div class="col-md-6">
+         <div class="huancabamba">
+             <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br> Huancabamba</a></h3></div>
+        
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+          <div class="morropon" >
+            <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>Ayabaca</a></h3></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+         <div class="piura1">
+             <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>Piura</a></h3></div>
+          </div>
+          
+        </div>
+        <div class="col-md-6">
+            <div class="paita">
+               <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>Paita</a></h3></div>
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+           <div class="sechura">
+               <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>Sechura</a></h3></div>
+            </div>
+            
+          </div>
+          <div class="col-md-6">
+            <div class="sullana" >
+               <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>sullana</a></h3></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+           <div class="talara">
+            <div class="overlay-effect h-100 w-100"><h3><a href="#">Provincia de <br>talara</a></h3></div>
+            </div>
+            
+          </div>
+        
+        
+      </div>
+  </div>
+  </div>
+ 
+  
+    <h3 id="imagenes">Ubicacion de Ayabaca</h3>
+    <div class="piura">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d550188.1822913889!2d-80.07387625042806!3d-4.756022417441407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x90356c6268b2b175%3A0x22b596b77f8ce5f4!2sAyabaca!5e0!3m2!1ses!2spe!4v1610357421767!5m2!1ses!2spe" width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        
+    </section>
+  
+
+
+
+
+   
+   <!-- Scripts -->
+   <script src="https://kit.fontawesome.com/35db202371.js"></script>
+   <script src="js/app.js"></script>
+   
+</body>
+</html>
